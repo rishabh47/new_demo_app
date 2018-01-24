@@ -1,0 +1,73 @@
+<div class="col-md-10">
+  <h1>Dashboard</h1>
+</div>
+<br>
+<div class=" buttons">
+  <a ui-sref="applyleave">
+    <button class="btn btn-default btn-secondary ">
+      <br><i class="fa fa-file fa-2x" aria-hidden="true"></i>
+      <br>
+      <br>Leave Manager</button>
+  </a>
+  <a ui-sref="adduser">
+    <button class="btn btn-default ">
+      <br><i class="fa fa-users fa-2x" aria-hidden="true"></i>
+      <br>
+      <br>Employee Manager</button>
+  </a>
+  <a ui-sref="addrole">
+    <button class="btn btn-default ">
+      <br><i class="fa fa-suitcase fa-2x" aria-hidden="true"></i>
+      <br>
+      <br>Role Manager</button>
+  </a>
+  <button class="btn btn-default ">
+    <br><i class="fa fa-tasks fa-2x" aria-hidden="true"></i>
+    <br>
+    <br>Task Manager</button>
+</div>
+<br>
+<br>
+<br>
+<div class="col-md-10">
+  <h3>Recent Updates</h3>
+  <div class="content">
+  <div ng-repeat="data in userdata">
+    <div class="row">
+      <div class="col-md-2 type">
+        <h4>{{data.type}}</h4>
+      </div>
+      <div class="col-md-6 name">
+        New user added
+        <h4 class="names">{{data.fullname}}</h4>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div ng-repeat="data in leavedata">
+    <div class="row">
+      <div class="col-md-2 type">
+        <h4>{{data.type}}</h4>
+      </div>
+      <div class="col-md-6 name">
+        <h4 class="names">{{data.fullname}}</h4><span> applied for a leave </span>
+        <p>Date From :- {{data.leave_from}}</p>
+        <p>Date To :- {{data.leave_to}}</p>
+        <p>Reason :- {{data.reason}}</p>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div ng-repeat="data in roledata">
+    <div class="row">
+      <div class="col-md-2 type">
+        <h4>{{data.type}}</h4>
+      </div>
+      <div class="col-md-7 name">
+        <h4 class="names">{{data.fullname}}</h4> was assigned a role of <span class="role">{{data.role}}</span>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+</div>

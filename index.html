@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/f9aa5df2e9.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-touch.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/lodash.min.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/jszip.min.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/excel-builder.dist.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.5.7/angular-messages.min.js"></script>
+  <script src="http://ui-grid.info/release/ui-grid.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-notify/0.8.0/ng-notify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-notify/0.8.0/ng-notify.min.css"></script>
+  <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+  <link rel="stylesheet" href="main.css">
+  <title>EmployeeBook</title>
+</head>
+
+<body>
+  <!-- Top navbar starts -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand " href="#">EmployeeBook </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a  ui-sref="home"><i class="fa fa-home" aria-hidden="true"></i>  Dashboard</a></li>
+        <li><a  ui-sref="applyleave">Leave Manager <i class="fa fa-caret-down" aria-hidden="true"></i>     </a></li>
+        <li><a  ui-sref="adduser">User Manager <i class="fa fa-caret-down" aria-hidden="true"></i>  </a></li>
+        <li><a  ui-sref="addrole">Role Manager <i class="fa fa-caret-down" aria-hidden="true"></i>  </a></li>
+        <li><a  href="#">Task Manager <i class="fa fa-caret-down" aria-hidden="true"></i>  </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin <i class="fa fa-caret-down" aria-hidden="true"></i>  </a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Top navbar ends -->
+  <nav class="navbar"></nav>
+  <div class="row">
+    <div class="col-md-2 ">
+      <!-- sidebar starts -->
+      <nav class="nav-sidebar">
+        <ul class="nav">
+          <li class="a active"><a ui-sref="home"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+          <li class="a"><a class="ex1" ui-sref="applyleave"><i class="fa fa-pencil" aria-hidden="true"></i> Apply Leave</a></li>
+          <li class="a"><a class="ex1" ui-sref="leavelist"><i class="fa fa-list-ul" aria-hidden="true"></i> Leave Listing</a></li>
+          <li class="a"><a class="ex1" ui-sref="adduser"><i class="fa fa-user" aria-hidden="true"></i> Add User</a></li>
+          <li class="a"><a class="ex1" ui-sref="userlist"><i class="fa fa-list-ul" aria-hidden="true"></i> User Listing</a></li>
+          <li class="a"><a class="ex1" ui-sref="addrole"><i class="fa fa-suitcase" aria-hidden="true"></i> Add Role </a></li>
+          <li class="a"><a class="ex1" ui-sref="rolelist"><i class="fa fa-list-ul" aria-hidden="true"></i> Role Listing</a></li>
+        </ul>
+      </nav>
+      <!-- sidebar ends -->
+    </div>
+    <!-- main area starts -->
+    <div class="col-md-6 col-md-offset-1">
+      <div ui-view></div>
+    </div>
+    <!-- main area ends -->
+  </div>
+  <script src="app.js"></script>
+  <script src="getuserdataservice.js"></script>
+  <script src="getroledataservice.js"></script>
+  <script src="getleavedataservice.js"></script>
+  <script src="myCtrl.js"></script>
+  <script src="myCtrl1.js"></script>
+  <script src="myCtrl2.js"></script>
+  <script src="myCtrl5.js"></script>
+  <script src="mainCtrl.js"></script>
+</body>
+
+</html>

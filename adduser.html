@@ -1,0 +1,74 @@
+<div>
+  <h1>Add New Employee</h1>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-9">
+      <form ng-submit="addNewItem()">
+        <div class="form-group row">
+          <label for="username" class="col-sm-3 col-form-label">Username *</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" placeholder="Username" ng-model="newusername" name="newusername" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="name" class="col-sm-3 col-form-label">Full Name *</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" placeholder="Full Name" ng-model="newname" name="newname" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="password" class="col-sm-3 col-form-label">Password *</label>
+          <div class="col-sm-5">
+            <!-- <input type="password" class="form-control" placeholder="Password" required> -->
+            <input placeholder="Password" name="pwd" ng-model="thePwd" class="form-control" type="password" pattern=".{2,}" required />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="confirmpass" class="col-sm-3 col-form-label">Confirm Password *</label>
+          <div class="col-sm-5">
+            <!-- <input type="password" class="form-control" placeholder="Confirm Password" required> -->
+            <input placeholder="Check Password" class="form-control" name="chk" ng-model="chkPwd" type="password" wj-validation-error="chkPwd != thePwd ? 'Passwords don\'t match' : ''" />
+          </div>
+          </div>
+        <div class="form-group row">
+          <label for="email" class="col-sm-3 col-form-label">Email *</label>
+          <div class="col-sm-5">
+            <input type="email" class="form-control" placeholder="Email" ng-model="newemail" name="newemail" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="date" class="col-sm-3 col-form-label">Date of Joining *</label>
+          <div class="col-sm-5">
+            <input type="Date" class="form-control" ng-model="date" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="date" class="col-sm-3 col-form-label">Role *</label>
+          <div class="col-sm-5">
+            <select name="cars"  ng-model="role" required>
+              <option value="">Select a Role </option>
+              <option value="Programmer">Programmer</option>
+              <option value="Designer">Designer</option>
+              <option value="Architect">Architect</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="date" ng-model="supervisor" class="col-sm-3 col-form-label">Superviser*</label>
+          <div class="col-sm-5">
+            <select name="cars" required>
+              <option value="">Please Select </option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2 col-md-offset-2">
+          <input type="Submit" ng-click="simple()" class="btn btn-primary" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
