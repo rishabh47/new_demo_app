@@ -7,13 +7,7 @@
       cellTemplate: '<div>{{rowRenderIndex + 1}} </div>',
       width: 60
     }, {
-      name: 'username',
-      cellEditableCondition: true
-    }, {
-      name: 'fullname',
-      cellEditableCondition: true
-    }, {
-      name: 'role',
+      name: 'roles',
       cellEditableCondition: true
     }, {
       name: 'Action',

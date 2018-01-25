@@ -2,7 +2,9 @@
   var module = angular.module("myApp");
   var myCtrl1 = function($scope, getleavedata, $filter,ngNotify) {
     $scope.data = getleavedata.data;
-    
+    ngNotify.config({
+      duration: 500
+  });
     $scope.simple = function(){
                 ngNotify.set('Form successfully submitted','success');
             };

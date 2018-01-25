@@ -2,7 +2,22 @@
   var module = angular.module("myApp");
   var myCtrl = function($scope, getuserdata,ngNotify) {
     $scope.data = getuserdata.data;
-  
+    ngNotify.config({
+      duration: 500
+  });
+
+      $scope.role = [
+          {value: '', displayName: 'Select a Value'},
+          {value: 'Designer', displayName: 'Designer'},
+          {value: 'Programmer', displayName: 'Programmer'},
+          {value: 'Architect', displayName: 'Architect'}
+       ];
+       $scope.supervisor = [
+         {value: '', displayName: 'Select a Value'},
+         {value: 'Manager', displayName: "Manager"},
+         {value: 'Team Lead', displayName: 'Team Lead'},
+         {value: 'HR', displayName: 'HR'}
+       ];
   $scope.inlineOptions = {
     customClass: getDayClass,
     minDate: new Date(),

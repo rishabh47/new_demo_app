@@ -6,26 +6,9 @@
     <div class="col-md-9">
       <form ng-submit="addNewRole(); simple()">
         <div class="form-group row">
-          <label for="username" class="col-sm-3 col-form-label">Username *</label>
+          <label for="date" class="col-sm-3 col-form-label">Add New Role *</label>
           <div class="col-sm-5">
-            <input type="text" class="form-control" placeholder="Username" ng-model="newusername" name="newusername" required>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="name" class="col-sm-3 col-form-label">Full Name *</label>
-          <div class="col-sm-5">
-            <input type="text" class="form-control" placeholder="Full Name" ng-model="newfullname" name="newfullname" required>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="date" class="col-sm-3 col-form-label">Role *</label>
-          <div class="col-sm-5">
-            <select ng-model="newrole" name="newrole" required>
-              <option value="">Select a role</option>
-              <option value="Programmer">Programmer</option>
-              <option value="Designer">Designer</option>
-              <option value="Architect">Architect</option>
-            </select>
+            <input type="text" class="form-control" placeholder="New Role" ng-model="newrole" name="newrole" required>
           </div>
         </div>
         <div class="col-md-2 col-md-offset-2">

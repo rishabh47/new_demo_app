@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ["ui.router", "ngTouch", "ui.grid", "ui.grid.edit",'ngNotify','ui.bootstrap']);
+var app = angular.module('myApp', ["ui.router", "ui.grid", "ui.grid.edit",'ngNotify','ui.bootstrap']);
 // routes
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
