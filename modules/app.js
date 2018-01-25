@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ["ui.router", "ngTouch", "ui.grid", "ui.grid.edit",'ngNotify']);
+var app = angular.module('myApp', ["ui.router", "ngTouch", "ui.grid", "ui.grid.edit",'ngNotify','ui.bootstrap']);
 // routes
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -10,7 +10,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('userlist', {
         url: '/userlist',
         templateUrl: 'userlisting.html',
-        controller:"myCtrl"
+        controller:"showuserdata"
       })
     .state("adduser", {
       url: '/adduser',
@@ -25,7 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state("leavelist", {
       url: '/leavelist',
       templateUrl: "leavelist.html",
-      controller: "myCtrl1"
+      controller: "showleavedata"
     })
     .state("addrole", {
       url: '/addrole',
@@ -35,7 +35,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state("rolelist", {
       url: '/rolelist',
       templateUrl: "rolelist.html",
-      controller: "myCtrl2"
+      controller: "showroledata"
     })
     $urlRouterProvider.otherwise("/dashboard");
 });

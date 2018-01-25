@@ -1,13 +1,13 @@
+body{
+  overflow-x: hidden;
+}
 .nav-sidebar {
   padding-left: 20%;
 }
 
-.nav-sidebar i {
+.nav-sidebar>i {
   color: black;
 }
-
-
-
 h1 {
   margin-top: 0px;
   font-weight: bold;
@@ -17,7 +17,6 @@ button {
   margin-top: 2%;
   margin-right: 5%;
 }
-
 .buttons button:hover {
   border: 1px solid #bfc4c4;
   background-color: #d9dddd;
@@ -42,13 +41,10 @@ textarea.form-control {
   width: 60%;
 }
 
-.nav-sidebar>.nav>li>a:visited{
-  background-color: #098FCE;
-}
 
 /* Style the active class, and buttons on mouse-over */
-div.ng-binding.ng-scope {
-  padding-left: 20%;
+ div.ng-binding.ng-scope {
+  padding-left: 10%;
 }
 
 .leave {
@@ -68,6 +64,7 @@ a {
   height:224px;
    overflow-x: hidden;
    overflow-y: auto;
+   padding-left: 15px;
  }
 
 .type {
@@ -90,8 +87,21 @@ a {
 }
 .ui-grid, .ui-grid-viewport {
     height: auto !important;
+    width:auto !important;
 }
 
 .role {
   font-weight: bold;
+ }
+ .nav>li>a:hover {
+  background-color: #098FCE;
+  border-radius: 8px;
+}
+.nav>li>a:visited{
+  background-color: #098FCE;
+  border-radius: 8px;
+}
+.active{
+  background-color: #098FCE;
+  border-radius: 8px;
 }
