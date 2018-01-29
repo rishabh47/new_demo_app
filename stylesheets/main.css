@@ -48,7 +48,7 @@ textarea.form-control {
 }
 
 .leave {
-  margin-left: 20%;
+  margin-left: 5%;
 }
 
 .btnns {
@@ -87,7 +87,10 @@ a {
 }
 .ui-grid, .ui-grid-viewport {
     height: auto !important;
-    width:auto !important;
+    width:auto ;
+}
+.grid-role{
+  width: 500px;
 }
 
 .role {

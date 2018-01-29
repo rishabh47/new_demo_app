@@ -1,21 +1,7 @@
 (function() {
   var module = angular.module("myApp");
-  var showleavedata = function($scope, getleavedata) {
-    $scope.data = getleavedata.data;
-    $scope.showaccept = function() {
-      return "Accepted";
-    };
-    $scope.showreject=function(){
-      return "Rjected";
-    };
-    if($scope.val)
-    {
-      $scope.result=$scope.showaccept();
-    }
-    else {
-      $scope.result=$scope.showreject();
-    }
-
+  var showleavedata = function($scope, data) {
+    $scope.data = data.getleave();
     $scope.columnDefs = [{
       name: 'S.No.',
       cellTemplate: '<div>{{rowRenderIndex + 1}} </div>',
@@ -41,8 +27,8 @@
       name: 'Action',
       cellEditableCondition: false,
       cellTemplate: `<div ng-controller="showleavedata">
-        <button type="button" class=" leave btn btn-success btn-xs" ng-click="showaccept(); val=true">Accepted</button>
-        <button type="button" class=" leave btn btn-danger btn-xs" ng-click="showreject(); val=false">Rejected</button>
+        <button type="button" class=" leave btn btn-success btn-xs" ng-click="showaccept(); showme=true" ng-hide=showme>Accepted</button>
+        <button type="button" class=" leave btn btn-danger btn-xs" ng-click="showreject(); showme=true" ng-hide=showme>Rejected</button>
       </div>`,
       width:200
     }];

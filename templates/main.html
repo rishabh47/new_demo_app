@@ -32,42 +32,44 @@
 <div class="col-md-10">
   <h3>Recent Updates</h3>
   <div class="content">
-  <div ng-repeat="data in userdata">
+  <div ng-repeat="d in data">
+  <div ng-if="d.type=='User'">
     <div class="row">
       <div class="col-md-2 type">
-        <h4>{{data.type}}</h4>
+        <h4>{{d.type}}</h4>
       </div>
       <div class="col-md-6 name">
         New user added
-        <h4 class="names">{{data.fullname}}</h4>
+        <h4 class="names">{{d.fullname}}</h4>
       </div>
     </div>
     <br>
   </div>
-  <div ng-repeat="data in leavedata">
+  <div ng-if="d.type=='Leave'">
     <div class="row">
       <div class="col-md-2 type">
-        <h4>{{data.type}}</h4>
+        <h4>{{d.type}}</h4>
       </div>
       <div class="col-md-6 name">
-        <h4 class="names">{{data.fullname}}</h4><span> applied for a leave </span>
-        <p>Date From :- {{data.leave_from}}</p>
-        <p>Date To :- {{data.leave_to}}</p>
-        <p>Reason :- {{data.reason}}</p>
+        <h4 class="names">{{d.fullname}}</h4><span> applied for a leave </span>
+        <p>Date From :- {{d.leave_from}}</p>
+        <p>Date To :- {{d.leave_to}}</p>
+        <p>Reason :- {{d.reason}}</p>
       </div>
     </div>
     <br>
   </div>
-  <div ng-repeat="data in roledata">
+  <div ng-if="d.type=='Role'">
     <div class="row">
       <div class="col-md-2 type">
-        <h4>{{data.type}}</h4>
+        <h4>{{d.type}}</h4>
       </div>
       <div class="col-md-7 name">
-        New Role Added <span class="role">{{data.roles}}</span>
+        New Role Added <span class="role">{{d.roles}}</span>
       </div>
     </div>
     <br>
   </div>
+</div>
 </div>
 </div>

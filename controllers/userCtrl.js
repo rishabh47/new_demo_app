@@ -1,7 +1,6 @@
 (function() {
   var module = angular.module("myApp");
-  var myCtrl = function($scope, getuserdata,ngNotify) {
-    $scope.data = getuserdata.data;
+  var userCtrl = function($scope,data,ngNotify) {
     ngNotify.config({
       duration: 500
   });
@@ -99,25 +98,22 @@
     $scope.simple = function(){
                 ngNotify.set('Form successfully submitted','success');
             };
+            $scope.updatedon = function() {
+              return moment().format('LLL');
+            };
     $scope.addNewItem = function() {
-      $scope.data.unshift({
+      $scope.data={
         fullname: $scope.newname,
         username: $scope.newusername,
         email: $scope.newemail,
         createdon: moment().format('LLL'),
         type: "User"
-      });
-      $scope.newname="";
-      $scope.newusername="";
-      $scope.newemail="";
-      $scope.thePwd="";
-      $scope.chkPwd="";
-      $scope.dt="";
-      $scope.role="";
-      $scope.supervisor="";
+      };
+      data.setuser($scope.data);
+      $scope.data=[];
     };
   }
-  module.controller("myCtrl", myCtrl);
+  module.controller("userCtrl", userCtrl);
   module.directive('wjValidationError', function () {
     return {
       require: 'ngModel',

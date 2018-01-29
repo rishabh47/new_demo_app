@@ -1,14 +1,12 @@
 (function() {
   var module = angular.module("myApp");
-  var myCtrl1 = function($scope, getleavedata, $filter,ngNotify) {
-    $scope.data = getleavedata.data;
+  var leaveCtrl = function($scope, data, $filter,ngNotify) {
     ngNotify.config({
       duration: 500
   });
     $scope.simple = function(){
                 ngNotify.set('Form successfully submitted','success');
             };
-
   $scope.inlineOptions = {
     customClass: getDayClass,
     minDate: new Date(),
@@ -77,18 +75,18 @@
     $scope.addNewLeave = function() {
       var dateasstringfrom = $filter('date')($scope.dt, "dd/MM/yy");
       var dateasstringto = $filter('date')($scope.dt1, "dd/MM/yy");
-      $scope.data.unshift({
+      $scope.data={
         fullname: $scope.newname,
         leave_from: dateasstringfrom,
         leave_to: dateasstringto,
         reason: $scope.reason,
         type: "Leave"
-      });
+      };
+      data.setleave($scope.data);
+};
 
-  $scope.newname="";
-  $scope.dt="";
-$scope.dt1="";
-$scope.reason="";
-};}
-  module.controller("myCtrl1", myCtrl1);
+
+
+}
+  module.controller("leaveCtrl", leaveCtrl);
 }());

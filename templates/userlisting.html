@@ -1,10 +1,7 @@
 <h1>User Listing</h1>
 <br>
 <br>
-<div ng-if="data.length>0">
-<div ui-grid-edit  ui-grid="{ data: data, columnDefs: columnDefs,enableRowSelection: true,enableSelectAll: true,enableFiltering: true}" class="grid ui-grid-selection" ui-grid-edit ui-grid-cellnav >
+<div ng-controller="showuserdata as vm">
+<div ui-grid-edit  ui-grid="vm.gridOptions" class="grid ui-grid-selection"></div>
 </div>
-</div>
-<div ng-if="data.length==0">
-  <h2>No Data To Display</h2>
 </div>

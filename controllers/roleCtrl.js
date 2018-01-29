@@ -1,7 +1,6 @@
 (function() {
   var module = angular.module("myApp");
-  var myCtrl2 = function($scope, getroledata,ngNotify) {
-    $scope.data = getroledata.data;
+  var roleCtrl = function($scope, data,ngNotify) {
     ngNotify.config({
       duration: 500
   });
@@ -10,12 +9,13 @@
             };
 
     $scope.addNewRole = function() {
-      $scope.data.unshift({
+      $scope.data={
         roles: $scope.newrole,
         type: "Role"
-      });
-      $scope.newrole="";
+      };
+      data.setrole($scope.data);
+      $scope.data=[];
     };
   }
-  module.controller("myCtrl2", myCtrl2);
+  module.controller("roleCtrl", roleCtrl);
 }());
