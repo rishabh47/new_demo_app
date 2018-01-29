@@ -1,40 +1,40 @@
-var app = angular.module('myApp', ["ui.router", "ui.grid", "ui.grid.edit",'ngNotify','ui.bootstrap','schemaForm']);
+var app = angular.module('myApp', ["ui.router", "ui.grid", 'ngNotify','ui.bootstrap','schemaForm']);
 // routes
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
   .state('home', {
       url: '/dashboard',
-      templateUrl: 'main.html',
+      templateUrl: '../templates/main.html',
       controller:"mainCtrl"
     })
     .state('userlist', {
         url: '/userlist',
-        templateUrl: 'userlisting.html',
+        templateUrl: '../templates/userlisting.html',
         controller:"showuserdata"
       })
     .state("adduser", {
       url: '/adduser',
-      templateUrl: "adduser.html",
+      templateUrl: "../templates/adduser.html",
       controller: "userCtrl"
     })
     .state("applyleave", {
       url: '/applyleave',
-      templateUrl: "appleave.html",
+      templateUrl: "../templates/appleave.html",
       controller: "leaveCtrl"
     })
     .state("leavelist", {
       url: '/leavelist',
-      templateUrl: "leavelist.html",
+      templateUrl: "../templates/leavelist.html",
       controller: "showleavedata"
     })
     .state("addrole", {
       url: '/addrole',
-      templateUrl: "addrole.html",
+      templateUrl: "../templates/addrole.html",
       controller: "roleCtrl"
     })
     .state("rolelist", {
       url: '/rolelist',
-      templateUrl: "rolelist.html",
+      templateUrl: "../templates/rolelist.html",
       controller: "showroledata"
     })
     $urlRouterProvider.otherwise("/dashboard");

@@ -4,8 +4,8 @@
     type: 'object',
     properties: {
       fullname: { type: 'string', title: 'Full Name' },
-      usernmae: { type: 'string', title: 'User Name' },
-      email: { type: 'email', title: 'Email' }}
+      username: { type: 'string', title: 'User Name' },
+      email: { type: 'string', title: 'Email ' }}
   });
   module.service("RowEditor", function RowEditor($rootScope, $modal){
 

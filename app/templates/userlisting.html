@@ -1,0 +1,12 @@
+<h1>User Listing</h1>
+<br>
+<br>
+<div ng-controller="showuserdata as vm">
+  <div ng-if="vm.gridOptions.data.length>0">
+<div ui-grid="vm.gridOptions" class="grid ui-grid-selection"></div>
+</div>
+<div ng-if="vm.gridOptions.data.length==0">
+  <h2>No Data To Display</h2>
+</div>
+</div>
+</div>
