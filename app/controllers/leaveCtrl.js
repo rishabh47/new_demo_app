@@ -7,70 +7,45 @@
     $scope.simple = function(){
                 ngNotify.set('Form successfully submitted','success');
             };
-  $scope.inlineOptions = {
-    customClass: getDayClass,
-    minDate: new Date(),
-    showWeeks: true
-  };
-
-  $scope.dateOptions = {
-    dateDisabled: disabled,
-    formatYear: 'yy',
-    maxDate: new Date(2020, 5, 22),
-    minDate: new Date(),
-    startingDay: 1
-  };
-
-  // Disable weekend selection
-  function disabled(data) {
-    var date = data.date,
-      mode = data.mode;
-    return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
-  }
 
 
+   $scope.clear = function () {
+     $scope.dt = null;
+   };
+
+   $scope.toggleMin = function() {
+     $scope.minDate = $scope.minDate ? null : new Date();
+   };
+   $scope.toggleMin();
+
+   $scope.open = function($event) {
+     $event.preventDefault();
+     $event.stopPropagation();
+
+     $scope.opened = true;
+   };
+
+   $scope.dateOptions = {
+     formatYear: 'yy',
+     startingDay: 1
+   };
 
 
-  $scope.open2 = function() {
-    $scope.popup2.opened = true;
-  };
-  $scope.open1 = function(){
-    $scope.popup1.opened = true;
-  };
+   $scope.clear1 = function () {
+     $scope.dt1 = null;
+   };
 
-  $scope.setDate = function(year, month, day) {
-    $scope.dt = new Date(year, month, day);
-    $scope.dt1 = new Date(year, month, day);
-  };
+   $scope.open1 = function($event) {
+     $event.preventDefault();
+     $event.stopPropagation();
 
+     $scope.opened1 = true;
+   };
 
-
-  $scope.popup2 = {
-    opened: false
-  };
-  $scope.popup1 = {
-    opened: false
-  };
-
-
-
-  function getDayClass(data) {
-    var date = data.date,
-      mode = data.mode;
-    if (mode === 'day') {
-      var dayToCheck = new Date(date).setHours(0,0,0,0);
-
-      for (var i = 0; i < $scope.events.length; i++) {
-        var currentDay = new Date($scope.events[i].date).setHours(0,0,0,0);
-
-        if (dayToCheck === currentDay) {
-          return $scope.events[i].status;
-        }
-      }
-    }
-
-    return '';
-  }
+   $scope.dateOptions1 = {
+     formatYear: 'yy',
+     startingDay: 1
+   };
 
     $scope.addNewLeave = function() {
       var dateasstringfrom = $filter('date')($scope.dt, "dd/MM/yy");

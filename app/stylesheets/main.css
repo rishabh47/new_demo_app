@@ -86,7 +86,7 @@ a {
   font-weight: bold;
 }
 .ui-grid, .ui-grid-viewport {
-    height: auto !important;
+    height: auto;
     width:auto ;
 }
 .grid-role{

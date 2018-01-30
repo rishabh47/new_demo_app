@@ -24,7 +24,7 @@
         name: 'createdon',
         cellEditableCondition: false,
         width: 220
-      }, {
+      },  {
         field:'id',
         name: 'Action',
         cellEditableCondition: false,
