@@ -30,9 +30,9 @@
 
     }, {
       name: 'Action',
-      cellTemplate: `<div>
+      cellTemplate: `<div ng-if="row.entity.status===undefined">
         <button type="button" class=" leave btn btn-success btn-xs" ng-click="showme=true; grid.appScope.a(row.entity)  " ng-hide=showme>Accept</button>
-        <button type="button" class=" leave btn btn-danger btn-xs" ng-click="showme=true; grid.appScope.b(row.entity)" ng-hide=showme>Reject</button>
+        <button type="button" class=" leave btn btn-danger btn-xs" ng-click="showme=true;  grid.appScope.b(row.entity)" ng-hide=showme>Reject</button>
       </div>`,
       width:200
     }];
