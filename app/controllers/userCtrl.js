@@ -54,7 +54,14 @@
         type: "User"
       };
       data.setuser($scope.data);
-      $scope.data=[];
+      $scope.newname=null;
+      $scope.newusername=null;
+      $scope.newemail=null;
+      $scope.role=null;
+      $scope.supervisor=null;
+      $scope.thePwd=null;
+      $scope.chkPwd=null;
+      $scope.dt=null;
     };
   }
   module.controller("userCtrl", userCtrl);

@@ -14,7 +14,7 @@
         type: "Role"
       };
       data.setrole($scope.data);
-      $scope.data=[];
+      $scope.newrole=null;
     };
   }
   module.controller("roleCtrl", roleCtrl);

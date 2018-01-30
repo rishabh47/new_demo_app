@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ["ui.router", "ui.grid", 'ngNotify','ui.bootstrap','schemaForm']);
+var app = angular.module('myApp', ["ui.router", "ui.grid", 'ngNotify','ui.bootstrap','schemaForm','ui.grid.cellNav','ui.grid.selection', 'ui.grid.pinning']);
 // routes
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider

@@ -1,10 +1,10 @@
 <h1>All MembersLeave</h1>
 <br>
 <br>
-<div ng-if="data.length>0">
-<div ui-grid="{ data: data, columnDefs: columnDefs,enableRowSelection: true,enableSelectAll: true,enableFiltering: true  }" class="grid ui-grid-selection " ui-grid-cellnav>
+<div ng-if="gridOptions.data.length>0">
+<div  ui-grid="gridOptions" class="grid ui-grid-selection " ui-grid-cellnav>
 </div>
 </div>
-<div ng-if="data.length==0">
+<div ng-if="gridOptions.data.length==0">
   <h2>No Data To Display</h2>
 </div>

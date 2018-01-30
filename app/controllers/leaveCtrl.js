@@ -58,7 +58,13 @@
         type: "Leave"
       };
       data.setleave($scope.data);
+$scope.newname=null;
+$scope.dt=null;
+$scope.dt1=null;
+$scope.reason=null;
+
 };
+
 
 
 
