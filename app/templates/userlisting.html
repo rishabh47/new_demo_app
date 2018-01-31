@@ -1,11 +1,10 @@
 <h1>User Listing</h1>
 <br>
-<br>
 <div ng-controller="showuserdata as vm">
   <div ng-if="vm.gridOptions.data.length>0">
     <button class="btn btn-default" ng-click='exportPdf(); downloaded()'>Download PDF</button>
     <button class="btn btn-default" ng-click='exportcsv();downloaded()'>Download CSV</button>
-    <div ui-grid="vm.gridOptions" ui-grid-selection ui-grid-exporter class="grid"></div>
+    <div ui-grid="vm.gridOptions" ui-grid-selection ui-grid-pagination ui-grid-exporter class="grid"></div>
   </div>
   <div ng-if="vm.gridOptions.data.length==0">
     <h2>No Data To Display</h2>
