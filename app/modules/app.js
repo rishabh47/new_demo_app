@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ["ui.router", "ui.grid", 'ui.bootstrap', 'schemaForm', 'ui.grid.cellNav', 'ui.grid.selection', 'ui.grid.pinning', 'toastr', 'ui.grid.exporter', 'ui.grid.moveColumns', 'ngAnimate', 'ngTouch']);
+var app = angular.module('myApp', ["ui.router", "ui.grid", 'ui.bootstrap', 'schemaForm', 'ui.grid.cellNav', 'ui.grid.selection',  'toastr', 'ui.grid.exporter', 'ui.grid.moveColumns', 'ngAnimate', 'ngTouch']);
 // routes
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
