@@ -46,7 +46,4 @@
       $modalInstance.close(row.entity);
     }
   };
-
-
-
 }());

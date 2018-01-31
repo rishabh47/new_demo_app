@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Employee manager app",
   "main": "index.html",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
   "scripts": {
     "start": "http-server -a localhost -p 8000 -c-1 ./app",
     "test": "hello"
@@ -16,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/rishabh47/new_demo_app/issues"
   },
-  "homepage": "https://github.com/rishabh47/new_demo_app#readme"
+  "homepage": "https://github.com/rishabh47/new_demo_app#readme",
+  "dependencies": {
+    "angular-toastr": "^2.1.1"
+  }
 }

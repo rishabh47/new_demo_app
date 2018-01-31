@@ -1,11 +1,10 @@
 (function() {
   var module = angular.module("myApp");
-  var roleCtrl = function($scope, data,ngNotify) {
-    ngNotify.config({
-      duration: 500
-  });
+  var roleCtrl = function($scope, data,$location,toastr) {
+
     $scope.simple = function(){
-                ngNotify.set('Form successfully submitted','success');
+      toastr.success('Form Submitted Successfully');
+      $location.path("/rolelist")
             };
 
     $scope.addNewRole = function() {
@@ -14,7 +13,6 @@
         type: "Role"
       };
       data.setrole($scope.data);
-      $scope.newrole=null;
     };
   }
   module.controller("roleCtrl", roleCtrl);

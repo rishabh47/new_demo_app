@@ -1,9 +1,6 @@
 (function() {
   var module = angular.module("myApp");
-  var userCtrl = function($scope,data,ngNotify) {
-    ngNotify.config({
-      duration: 500
-  });
+  var userCtrl = function($scope,data,$location,toastr) {
 
       $scope.role = [
           {value: '', displayName: 'Select a Value'},
@@ -43,7 +40,8 @@
      startingDay: 1
      };
     $scope.simple = function(){
-                ngNotify.set('Form successfully submitted','success');
+      toastr.success('Form Submitted Successfully');
+      $location.path("/userlist")
             };
     $scope.addNewItem = function() {
       $scope.data={
@@ -54,14 +52,6 @@
         type: "User"
       };
       data.setuser($scope.data);
-      $scope.newname=null;
-      $scope.newusername=null;
-      $scope.newemail=null;
-      $scope.role=null;
-      $scope.supervisor=null;
-      $scope.thePwd=null;
-      $scope.chkPwd=null;
-      $scope.dt=null;
     };
   }
   module.controller("userCtrl", userCtrl);

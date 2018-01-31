@@ -4,11 +4,7 @@
     var vm = this;
     vm.editRow = RowEditor.editRow;
     vm.gridOptions = {
-      columnDefs: [{
-        name: 'S.No.',
-        cellTemplate: '<div>{{rowRenderIndex + 1}} </div>',
-        width: 60
-      }, {
+      columnDefs: [ {
         name: 'fullname',
         cellEditableCondition: true,
         width: 150

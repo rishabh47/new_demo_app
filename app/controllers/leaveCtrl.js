@@ -1,11 +1,10 @@
 (function() {
   var module = angular.module("myApp");
-  var leaveCtrl = function($scope, data, $filter,ngNotify) {
-    ngNotify.config({
-      duration: 500
-  });
+  var leaveCtrl = function($scope, toastr,data, $filter,$location) {
+
     $scope.simple = function(){
-                ngNotify.set('Form successfully submitted','success');
+                 toastr.success('Form Submitted Successfully');
+                 $location.path("/leavelist")
             };
 
 
@@ -46,7 +45,6 @@
      formatYear: 'yy',
      startingDay: 1
    };
-
     $scope.addNewLeave = function() {
       var dateasstringfrom = $filter('date')($scope.dt, "dd/MM/yy");
       var dateasstringto = $filter('date')($scope.dt1, "dd/MM/yy");
@@ -58,16 +56,7 @@
         type: "Leave"
       };
       data.setleave($scope.data);
-$scope.newname=null;
-$scope.dt=null;
-$scope.dt1=null;
-$scope.reason=null;
-
 };
-
-
-
-
 }
   module.controller("leaveCtrl", leaveCtrl);
 }());

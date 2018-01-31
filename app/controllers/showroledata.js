@@ -1,6 +1,6 @@
 (function() {
   var module = angular.module("myApp");
-  var showroledata = function($scope, data,ngNotify) {
+  var showroledata = function($scope, data) {
     $scope.data = data.getrole();
     $scope.columnDefs = [{
       name: 'S.No.',

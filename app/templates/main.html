@@ -31,6 +31,7 @@
 <br>
 <div class="col-md-10">
   <h3>Recent Updates</h3>
+  <div ng-if="data.length>0">
   <div class="content">
   <div ng-repeat="d in data">
   <div ng-if="d.type=='User'">
@@ -73,3 +74,4 @@
 </div>
 </div>
 </div>
+<div ng-if="data.length==0"><h2>No Data To Display</h2></div></div>

@@ -17,6 +17,13 @@ button {
   margin-top: 2%;
   margin-right: 5%;
 }
+.brdr{
+  border: 2px groove grey;
+border-radius: 12px;
+}
+.sub{
+  padding-left: 0;
+}
 .buttons button:hover {
   border: 1px solid #bfc4c4;
   background-color: #d9dddd;
@@ -38,13 +45,19 @@ h3 {
 }
 
 textarea.form-control {
-  width: 60%;
+  width: 38%;
+  margin: 0px 247.109px 0px 195px;
+  resize:none;
 }
-
-
+a.ex1{
+  margin-top: 5px;
+}
 /* Style the active class, and buttons on mouse-over */
  div.ng-binding.ng-scope {
   padding-left: 10%;
+}
+.dtp{
+  margin-top: 0;
 }
 
 .leave {
@@ -99,6 +112,8 @@ a {
  .nav>li>a:hover {
   background-color: #098FCE;
   border-radius: 8px;
+  color: white;
+
 }
 .nav>li>a:visited{
   background-color: #098FCE;
@@ -107,4 +122,5 @@ a {
 .active{
   background-color: #098FCE;
   border-radius: 8px;
+  color: white;
 }
