@@ -17,7 +17,7 @@
       $scope.gridApi = gridApi;
     }
 
-    $scope.gridOptions.columnDefs = [{
+    $scope.gridOptions={columnDefs : [{
       name: 'sno',
       displayName: 'S.No.',
       cellTemplate: '<div>{{rowRenderIndex + 1}} </div>',
@@ -59,7 +59,8 @@
 
     `,
       width: 200
-    }];
+    }],enableFiltering: true
+  };
     $scope.gridOptions.data = data.getleave();
 
   }

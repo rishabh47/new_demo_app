@@ -27,6 +27,7 @@
         cellTemplate: '../templates/edit-button.html',
         width: 150
       }],enableGridMenu: false,
+      enableFiltering: true,
     enableSelectAll: true,
     exporterCsvFilename: 'myFile.csv',
     exporterPdfDefaultStyle: {fontSize: 9},
