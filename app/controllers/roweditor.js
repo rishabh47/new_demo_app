@@ -3,11 +3,21 @@
   module.constant('PersonSchema', {
     type: 'object',
     properties: {
-      fullname: { type: 'string', title: 'Full Name' },
-      username: { type: 'string', title: 'User Name' },
-      email: { type: 'string', title: 'Email ' }}
+      fullname: {
+        type: 'string',
+        title: 'Full Name'
+      },
+      username: {
+        type: 'string',
+        title: 'User Name'
+      },
+      email: {
+        type: 'string',
+        title: 'Email '
+      }
+    }
   });
-  module.service("RowEditor", function RowEditor($rootScope, $modal){
+  module.service("RowEditor", function RowEditor($rootScope, $modal) {
 
     var service = {};
     service.editRow = editRow;
@@ -18,8 +28,12 @@
         controller: ['$modalInstance', 'PersonSchema', 'grid', 'row', RowEditCtrl],
         controllerAs: 'vm',
         resolve: {
-          grid: function () { return grid; },
-          row: function () { return row; }
+          grid: function() {
+            return grid;
+          },
+          row: function() {
+            return row;
+          }
         }
       });
     }
@@ -45,5 +59,5 @@
       row.entity = angular.extend(row.entity, vm.entity);
       $modalInstance.close(row.entity);
     }
-  };
+  }
 }());

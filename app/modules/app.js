@@ -1,17 +1,17 @@
-var app = angular.module('myApp', ["ui.router", "ui.grid",'ui.bootstrap','schemaForm','ui.grid.cellNav','ui.grid.selection', 'ui.grid.pinning','toastr','ui.grid.exporter', 'ui.grid.moveColumns','ngAnimate', 'ngTouch']);
+var app = angular.module('myApp', ["ui.router", "ui.grid", 'ui.bootstrap', 'schemaForm', 'ui.grid.cellNav', 'ui.grid.selection', 'ui.grid.pinning', 'toastr', 'ui.grid.exporter', 'ui.grid.moveColumns', 'ngAnimate', 'ngTouch']);
 // routes
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-  .state('home', {
+    .state('home', {
       url: '/dashboard',
       templateUrl: '../templates/main.html',
-      controller:"mainCtrl"
+      controller: "mainCtrl"
     })
     .state('userlist', {
-        url: '/userlist',
-        templateUrl: '../templates/userlisting.html',
-        controller:"showuserdata"
-      })
+      url: '/userlist',
+      templateUrl: '../templates/userlisting.html',
+      controller: "showuserdata"
+    })
     .state("adduser", {
       url: '/adduser',
       templateUrl: "../templates/adduser.html",
@@ -37,5 +37,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "../templates/rolelist.html",
       controller: "showroledata"
     })
-    $urlRouterProvider.otherwise("/dashboard");
+  $urlRouterProvider.otherwise("/dashboard");
 });
