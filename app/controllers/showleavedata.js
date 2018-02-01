@@ -5,7 +5,6 @@
 
     $scope.a = function(row) {
       row.status = "Accepted";
-      console.log(row);
     };
     $scope.b = function(row) {
       row.status = "Rejected";

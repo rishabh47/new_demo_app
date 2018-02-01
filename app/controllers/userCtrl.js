@@ -28,10 +28,7 @@
       value: 'HR',
       displayName: 'HR'
     }];
-    $scope.today = function() {
-      $scope.dt = new Date();
-    };
-    $scope.today();
+
 
     $scope.clear = function() {
       $scope.dt = null;

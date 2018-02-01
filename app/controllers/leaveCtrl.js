@@ -45,12 +45,13 @@
       startingDay: 1
     };
     $scope.addNewLeave = function() {
-      var dateasstringfrom = $filter('date')($scope.dt, "dd/MM/yy");
-      var dateasstringto = $filter('date')($scope.dt1, "dd/MM/yy");
-      $scope.data = {
+      $scope.dateasstringfrom = $filter('date')($scope.dt, "yyyy/MM/dd");
+      $scope.dateasstringto = $filter('date')($scope.dt1, "yyyy/MM/dd");
+      console.log($scope.dateasstringfrom);
+       $scope.data = {
         fullname: $scope.newname,
-        leave_from: dateasstringfrom,
-        leave_to: dateasstringto,
+        leave_from: $scope.dateasstringfrom,
+        leave_to: $scope.dateasstringto,
         reason: $scope.reason,
         type: "Leave"
       };

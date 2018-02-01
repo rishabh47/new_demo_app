@@ -22,9 +22,9 @@
 <br>
 <div ng-controller="showuserdata as vm">
   <div ng-if="vm.gridOptions.data.length>0">
-    <button class="btn btn-default" ng-click='exportPdf(); downloaded()'>Download PDF</button>
-    <button class="btn btn-default" ng-click='exportcsv();downloaded()'>Download CSV</button>
-    <button class="btn btn-default" ng-click='exportexcel();downloaded()'>Download EXCEL</button>
+    <button class="btn download btn-default" ng-click='exportPdf(); downloaded()'>Download PDF</button>
+    <button class="btn download btn-default" ng-click='exportcsv();downloaded()'>Download CSV</button>
+    <button class="btn download btn-default" ng-click='exportexcel();downloaded()'>Download EXCEL</button>
     <div ui-grid="vm.gridOptions" ui-grid-selection ui-grid-pagination ui-grid-exporter class="grid"></div>
   </div>
   <div ng-if="vm.gridOptions.data.length==0">
