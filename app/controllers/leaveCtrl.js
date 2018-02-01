@@ -47,7 +47,6 @@
     $scope.addNewLeave = function() {
       $scope.dateasstringfrom = $filter('date')($scope.dt, "yyyy/MM/dd");
       $scope.dateasstringto = $filter('date')($scope.dt1, "yyyy/MM/dd");
-      console.log($scope.dateasstringfrom);
        $scope.data = {
         fullname: $scope.newname,
         leave_from: $scope.dateasstringfrom,

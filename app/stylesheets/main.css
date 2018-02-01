@@ -49,13 +49,15 @@ input.ui-grid-pager-control-input{
 }
 
 .brdr {
-  border: 2px groove grey;
+  border: 2px groove lightgrey;
   border-radius: 12px;
 }
 
 .sub {
   padding-left: 0;
 }
+.ui-grid-row .is-odd .ui-grid-cell { background-color: #fff; }
+.ui-grid-row .is-even .ui-grid-cell { background-color: #ccc; }
 
 .buttons button:hover {
   border: 1px solid #bfc4c4;

@@ -28,6 +28,9 @@
         width: 150
       }],
     enableGridMenu: false,
+    rowTemplate: '<div ng-class="grid.appScope.rowColor(row, grid)">' +
+            '<div ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" class="ui-grid-cell" ng-class="{ \'ui-grid-row-header-cell\': col.isRowHeader }"  ui-grid-cell></div>' +
+        '</div>',
     enableFiltering: true,
     enableSelectAll: true,
     exporterCsvFilename: 'myFile.csv',
@@ -67,6 +70,10 @@
   var rowTypes = uiGridExporterConstants.SELECTED;
   var colTypes = uiGridExporterConstants.ALL;
   uiGridExporterService.csvExport(grid, rowTypes, colTypes);
+  };
+  $scope.rowColor = function(row, grid) {
+      var idx = grid.renderContainers.body.visibleRowCache.indexOf(row)
+      return idx % 2 === 0 ? 'is-even' : 'is-odd';
   };
   $scope.exportexcel = function() {
   var grid = vm.gridApi.grid;

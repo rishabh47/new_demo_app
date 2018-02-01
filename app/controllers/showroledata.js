@@ -32,9 +32,15 @@
       </div>
 `,
       width: 200
-    }],enableFiltering: true
+    }],rowTemplate: '<div ng-class="grid.appScope.rowColor(row, grid)">' +
+            '<div ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" class="ui-grid-cell" ng-class="{ \'ui-grid-row-header-cell\': col.isRowHeader }"  ui-grid-cell></div>' +
+        '</div>',enableFiltering: true
   };
     $scope.gridOptions.data = data.getrole();
+    $scope.rowColor = function(row, grid) {
+        var idx = grid.renderContainers.body.visibleRowCache.indexOf(row)
+        return idx % 2 === 0 ? 'is-even' : 'is-odd';
+    };
 
   }
   module.controller("showroledata", showroledata);
