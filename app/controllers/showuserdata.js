@@ -26,10 +26,12 @@
         cellEditableCondition: false,
         cellTemplate: '../templates/edit-button.html',
         width: 150
-      }],enableGridMenu: false,
-      enableFiltering: true,
+      }],
+    enableGridMenu: false,
+    enableFiltering: true,
     enableSelectAll: true,
     exporterCsvFilename: 'myFile.csv',
+    exporterExcelFilename: 'myFile.xls',
     exporterPdfDefaultStyle: {fontSize: 9},
     exporterPdfTableHeaderStyle: {fontSize: 10, bold: true, italics: true, color: 'red'},
     exporterPdfHeader: { text: "User Data", style: 'headerStyle' },
@@ -65,7 +67,13 @@
   var rowTypes = uiGridExporterConstants.SELECTED;
   var colTypes = uiGridExporterConstants.ALL;
   uiGridExporterService.csvExport(grid, rowTypes, colTypes);
-};
+  };
+  $scope.exportexcel = function() {
+  var grid = vm.gridApi.grid;
+  var rowTypes = uiGridExporterConstants.SELECTED;
+  var colTypes = uiGridExporterConstants.ALL;
+  uiGridExporterService.excelExport(grid, rowTypes, colTypes);
+  };
   };
   module.controller("showuserdata", showuserdata);
 }());

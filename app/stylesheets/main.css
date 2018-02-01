@@ -111,7 +111,7 @@ a {
 }
 
 .content {
-  max-height: 500px;
+  max-height: 490px;
   overflow-x: hidden;
   overflow-y: auto;
   padding-left: 15px;
@@ -146,7 +146,9 @@ a {
 .grid-role {
   width: 410px;
 }
-
+.grid{
+  margin-bottom: 15px;
+}
 .role {
   font-weight: bold;
 }
