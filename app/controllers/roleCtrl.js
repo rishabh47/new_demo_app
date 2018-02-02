@@ -10,9 +10,12 @@
     $scope.addNewRole = function() {
       $scope.data = {
         roles: $scope.newrole,
-        type: "Role"
+        type: "Role",
+        status: "Activated",
+        value: $scope.newrole
       };
       data.setrole($scope.data);
+      data.srole($scope.data.roles);
     };
   }
   module.config(function(toastrConfig) {

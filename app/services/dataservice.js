@@ -4,6 +4,7 @@
     var user = [];
     var leave = [];
     var role = [];
+    var r=[];
 
     this.setleave = function(object) {
       leave.push(object);
@@ -28,6 +29,12 @@
     }
     this.getupdate = function() {
       return update;
+    }
+    this.srole = function(object){
+      r.unshift(object);
+    }
+    this.grole = function(){
+      return r;
     }
   };
 

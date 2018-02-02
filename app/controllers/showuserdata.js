@@ -4,7 +4,7 @@
     var vm = this;
     vm.editRow = RowEditor.editRow;
     vm.gridOptions = {
-      paginationPageSizes: [2,4,6,8,10],
+      paginationPageSizes: [4,6,8,10],
       columnDefs: [{
         name: 'fullname',
         cellEditableCondition: true,
@@ -16,7 +16,7 @@
       }, {
         name: 'email',
         cellEditableCondition: true,
-        width: 270
+        width: 250
       }, {
         name: 'createdon',
         cellEditableCondition: false,
@@ -26,7 +26,7 @@
         name: 'Action',
         cellEditableCondition: false,
         cellTemplate: '../templates/edit-button.html',
-        width: 150
+        width: 120
       }],
     enableGridMenu: false,
     rowTemplate: '<div ng-class="grid.appScope.rowColor(row, grid)">' +

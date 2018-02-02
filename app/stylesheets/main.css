@@ -54,9 +54,10 @@ input.ui-grid-pager-control-input{
 
 .sub {
   padding-left: 0;
+  margin-bottom: 10px;
 }
-.ui-grid-row .is-odd .ui-grid-cell { background-color: lightblue; }
-.ui-grid-row .is-even .ui-grid-cell { background-color: lightgreen; }
+.ui-grid-row .is-odd .ui-grid-cell { background-color: #fff; }
+.ui-grid-row .is-even .ui-grid-cell { background-color: #ccc; }
 
 .buttons button:hover {
   border: 1px solid #bfc4c4;
@@ -67,6 +68,10 @@ input.ui-grid-pager-control-input{
   background-image: -ms-linear-gradient(top, #d9dddd, #c6c3c3);
   background-image: -o-linear-gradient(top, #d9dddd, #c6c3c3);
   background-image: linear-gradient(to bottom, #d9dddd, #c6c3c3);
+}
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
 }
 .downloadbtns{
   margin-left: 530px;

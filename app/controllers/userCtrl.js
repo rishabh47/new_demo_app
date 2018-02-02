@@ -2,19 +2,28 @@
   var module = angular.module("myApp");
   var userCtrl = function($scope, data, $location, toastr) {
 
-    $scope.role = [{
-      value: '',
-      displayName: 'Select a Value'
-    }, {
-      value: 'Designer',
-      displayName: 'Designer'
-    }, {
-      value: 'Programmer',
-      displayName: 'Programmer'
-    }, {
-      value: 'Architect',
-      displayName: 'Architect'
-    }];
+  //   $scope.role = [{
+  //     value: '',
+  //     displayName: 'Select a Value'
+  //   }, {
+  //     value: 'Designer',
+  //     displayName: 'Designer'
+  //   }, {
+  //     value: 'Programmer',
+  //     displayName: 'Programmer'
+  //   }, {
+  //     value: 'Architect',
+  //     displayName: 'Architect'
+  //   }];
+  //   if(data.grole()!="")
+  //   {
+  //   $scope.role.unshift(data.grole());
+  // }
+  //   console.log(data.grole());
+  $scope.role=data.grole();
+  console.log($scope.role);
+  console.log(data.grole()[0]);
+
     $scope.supervisor = [{
       value: '',
       displayName: 'Select a Value'

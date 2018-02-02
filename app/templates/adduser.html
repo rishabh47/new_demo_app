@@ -76,8 +76,10 @@
           <label for="date" class="col-sm-3 col-form-label">Role *</label>
           <div class="col-sm-5">
             <select required>
-              <option ng-repeat="roles in role" value="{{roles.value}}">
-                {{roles.displayName}}
+              <!-- <option value=''>Select A Value</option> -->
+              <option value="" disabled selected>Select your option</option>
+              <option ng-repeat="roles in role" value="{{roles}}" >
+                {{roles}}
               </option>
             </select>
           </div>

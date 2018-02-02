@@ -22,7 +22,7 @@
     }
 
     $scope.gridOptions={
-       paginationPageSizes: [2,4,6,8,10],
+       paginationPageSizes: [4,6,8,10],
        columnDefs : [{
       name: 'sno',
       displayName: 'S.No.',
@@ -33,9 +33,15 @@
       width: 150
     }, {
       name: 'leave_from',
-    }, {
+      type: 'date',
+      cellFilter: 'date:\'dd.MM.yyyy\'',
+       }
+    , {
       name: 'leave_to',
-    }, {
+      type: 'date',
+      cellFilter: 'date:\'dd.MM.yyyy\'',
+       }
+, {
       name: 'reason',
     }, {
       name: 'status'

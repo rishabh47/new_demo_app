@@ -39,18 +39,20 @@
 
       $scope.opened1 = true;
     };
+    $scope.setDate = function(year, month, day) {
+            $scope.dt1 = new Date(year, month, day);
+            $scope.dt2 = new Date(year, month, day);
+      };
 
     $scope.dateOptions1 = {
       formatYear: 'yy',
       startingDay: 1
     };
     $scope.addNewLeave = function() {
-      $scope.dateasstringfrom = $filter('date')($scope.dt, "yyyy/MM/dd");
-      $scope.dateasstringto = $filter('date')($scope.dt1, "yyyy/MM/dd");
        $scope.data = {
         fullname: $scope.newname,
-        leave_from: $scope.dateasstringfrom,
-        leave_to: $scope.dateasstringto,
+        leave_from: moment($scope.dt).format('ll'),
+        leave_to: moment($scope.dt1).format('ll'),
         reason: $scope.reason,
         type: "Leave"
       };

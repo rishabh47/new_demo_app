@@ -2,9 +2,6 @@
   var module = angular.module("myApp");
   var showroledata = function($scope, data) {
     $scope.gridOptions = {};
-    $scope.a = function(row) {
-      row.status = "Activated";
-    };
     $scope.b = function(row) {
       row.status = "Deactivated";
     };
@@ -13,7 +10,7 @@
     }
 
     $scope.gridOptions={
-      paginationPageSizes: [2,4,6,8,10],
+      paginationPageSizes: [4,6,8,10],
       columnDefs: [{
       name: 'S.No.',
       cellTemplate: '<div>{{rowRenderIndex + 1}} </div>',
@@ -28,9 +25,8 @@
     }, {
       name: 'Action',
       cellEditableCondition: false,
-      cellTemplate: `<div class='btnns' ng-if="row.entity.status===undefined">
-        <button type="button" class="btn leave btn-info btn-xs" ng-click="showme=true; grid.appScope.a(row.entity)" ng-hide="showme">Activate</button>
-        <button type="button" class="btn leave btn-warning btn-xs" ng-click="showme=true; grid.appScope.b(row.entity)" ng-hide="showme">Deactivate</button>
+      cellTemplate: `<div class='btnns' ng-if="row.entity.status==='Activated'">
+        <button type="button" class="btn leave btn-warning btn-xs" ng-click="grid.appScope.b(row.entity)" >Deactivate</button>
       </div>
 `,
       width: 200
