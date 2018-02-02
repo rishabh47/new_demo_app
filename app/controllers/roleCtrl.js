@@ -15,7 +15,7 @@
         value: $scope.newrole
       };
       data.setrole($scope.data);
-      data.srole($scope.data.roles);
+      data.srole($scope.data);
     };
   }
   module.config(function(toastrConfig) {

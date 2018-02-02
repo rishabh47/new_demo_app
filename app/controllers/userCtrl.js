@@ -20,9 +20,18 @@
   //   $scope.role.unshift(data.grole());
   // }
   //   console.log(data.grole());
-  $scope.role=data.grole();
-  console.log($scope.role);
-  console.log(data.grole()[0]);
+  $scope.rolei=data.grole();
+  $scope.role=[];
+  angular.forEach($scope.rolei,function(value,key){
+    if(value.status==='Activated')
+    {
+      $scope.role=$scope.rolei;
+    }
+    if(value.status==='Deactivated')
+    {
+      $scope.role.pop();
+    }
+  });
 
     $scope.supervisor = [{
       value: '',
