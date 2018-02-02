@@ -50,7 +50,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" ng-click="grid.appScope.funclose(row.entity)" data-dismiss="modal">&times;</button>
+              <button type="button" class="close" ng-click="grid.appScope.funclose(row.entity);grid.appScope.simple1()" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
               <p>Are you sure you want to perform this action ?</p>

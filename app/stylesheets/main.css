@@ -55,8 +55,8 @@ input.ui-grid-pager-control-input{
 .sub {
   padding-left: 0;
 }
-.ui-grid-row .is-odd .ui-grid-cell { background-color: #fff; }
-.ui-grid-row .is-even .ui-grid-cell { background-color: #ccc; }
+.ui-grid-row .is-odd .ui-grid-cell { background-color: lightblue; }
+.ui-grid-row .is-even .ui-grid-cell { background-color: lightgreen; }
 
 .buttons button:hover {
   border: 1px solid #bfc4c4;
@@ -121,7 +121,10 @@ a {
   padding-left: 15px;
   margin-left:10px;
 }
-
+.leave{
+  margin-top: 5px;
+  margin-left: 10px;
+}
 .type {
   font-weight: bold;
   background-color: lightgreen;

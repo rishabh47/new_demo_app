@@ -29,8 +29,8 @@
       name: 'Action',
       cellEditableCondition: false,
       cellTemplate: `<div class='btnns' ng-if="row.entity.status===undefined">
-        <button type="button" class="btn btn-info btn-xs" ng-click="showme=true; grid.appScope.a(row.entity)" ng-hide="showme">Activate</button>
-        <button type="button" class="btn btn-warning btn-xs" ng-click="showme=true; grid.appScope.b(row.entity)" ng-hide="showme">Deactivate</button>
+        <button type="button" class="btn leave btn-info btn-xs" ng-click="showme=true; grid.appScope.a(row.entity)" ng-hide="showme">Activate</button>
+        <button type="button" class="btn leave btn-warning btn-xs" ng-click="showme=true; grid.appScope.b(row.entity)" ng-hide="showme">Deactivate</button>
       </div>
 `,
       width: 200
