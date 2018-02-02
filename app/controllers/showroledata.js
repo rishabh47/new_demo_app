@@ -12,7 +12,9 @@
       $scope.gridApi = gridApi;
     }
 
-    $scope.gridOptions={columnDefs: [{
+    $scope.gridOptions={
+      paginationPageSizes: [2,4,6,8,10],
+      columnDefs: [{
       name: 'S.No.',
       cellTemplate: '<div>{{rowRenderIndex + 1}} </div>',
       width: 60

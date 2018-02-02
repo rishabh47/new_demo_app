@@ -48,9 +48,27 @@
       </div>
       <ul class="nav navbar-nav">
         <li ng-click="item=0" ><a ui-sref="home"><i class="fa fa-home" aria-hidden="true"></i>  Dashboard</a></li>
-        <li ng-click="item=1" ><a ui-sref="applyleave">Leave Manager <i class="fa fa-caret-down" aria-hidden="true"></i>     </a></li>
-        <li ng-click="item=3" ><a ui-sref="adduser">User Manager <i class="fa fa-caret-down" aria-hidden="true"></i>  </a></li>
-        <li ng-click="item=5" ><a ui-sref="addrole">Role Manager <i class="fa fa-caret-down" aria-hidden="true"></i>  </a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Leave Manager <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="applyleave">Apply Leave</a></li>
+            <li><a ui-sref="leavelist">Leave Listing</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Manager <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="adduser">Add User</a></li>
+            <li><a ui-sref="userlist">User Listing</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Role Manager <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="addrole">Add Role</a></li>
+            <li><a ui-sref="rolelist">Role Listing</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </nav>

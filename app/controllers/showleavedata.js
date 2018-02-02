@@ -1,8 +1,13 @@
 (function() {
   var module = angular.module("myApp");
-  var showleavedata = function($scope, data) {
+  var showleavedata = function($scope,toastr,data) {
     $scope.gridOptions = {};
-
+    $scope.simple = function() {
+      toastr.success('Status Added Successfully');
+    };
+    $scope.simple1 = function() {
+      toastr.error('Denied');
+    };
     $scope.a = function(row) {
       row.status = "Accepted";
     };
@@ -16,7 +21,9 @@
       $scope.gridApi = gridApi;
     }
 
-    $scope.gridOptions={columnDefs : [{
+    $scope.gridOptions={
+       paginationPageSizes: [2,4,6,8,10],
+       columnDefs : [{
       name: 'sno',
       displayName: 'S.No.',
       cellTemplate: '<div>{{rowRenderIndex + 1}} </div>',
@@ -49,8 +56,8 @@
               <p>Are you sure you want to perform this action ?</p>
             </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-primary"  data-dismiss="modal">Sure</button>
-              <button type="button" class="btn btn-default" ng-click="grid.appScope.funclose(row.entity)"  data-dismiss="modal" >Close</button>
+              <button type="button" class="btn btn-primary" ng-click="grid.appScope.simple()"  data-dismiss="modal">Sure</button>
+              <button type="button" class="btn btn-default" ng-click="grid.appScope.funclose(row.entity);grid.appScope.simple1()"  data-dismiss="modal" >Close</button>
           </div>
         </div>
       </div>

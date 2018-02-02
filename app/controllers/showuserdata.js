@@ -4,6 +4,7 @@
     var vm = this;
     vm.editRow = RowEditor.editRow;
     vm.gridOptions = {
+      paginationPageSizes: [2,4,6,8,10],
       columnDefs: [{
         name: 'fullname',
         cellEditableCondition: true,

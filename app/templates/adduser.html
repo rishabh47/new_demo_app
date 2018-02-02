@@ -41,7 +41,7 @@
           <div class="col-sm-5">
             <input placeholder="Password" name="pwd" ng-model="thePwd"  class="form-control" type="password" pattern=".{5,}" required />
           <div class="error-message" ng-show="form.pwd.$invalid && form.pwd.$dirty">
-              Passwords must have at least 5 chars.
+              <small>Passwords must have at least 5 chars.</small>
               </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
           <div class="col-sm-5">
             <input placeholder="Check Password" class="form-control"   name="check" ng-model="chkPwd" type="password" wj-validation-error="chkPwd != thePwd ? 'Passwords don\'t match' : ''" />
             <div class="error-message" ng-if="form.check.$invalid && form.check.$dirty ">
-                    Sorry, the passwords don't match.
+                    <small>Sorry, the passwords don't match.</small>
                 </div>
           </div>
         </div>
